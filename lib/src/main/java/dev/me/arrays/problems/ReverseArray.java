@@ -10,7 +10,6 @@ public class ReverseArray {
             return word;
         }
 
-        char initial = word.charAt(word.length()-1);
         StringBuilder sb = new StringBuilder(word.length()); //allocate
 
         for(int i=word.length()-1;i>=0;i--){
@@ -21,6 +20,9 @@ public class ReverseArray {
     }
 
     public static String reverse2(String word){
+        if (word == null || word.isEmpty()){
+            return word;
+        }
         StringBuilder sb = new StringBuilder(word);
         return sb.reverse().toString();
     }
